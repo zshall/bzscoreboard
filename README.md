@@ -37,4 +37,4 @@ Known issues
 
 * I don't know the syntax for suicide messages yet, so I can't program in a pattern to listen for them.
 
-* If many messages are sent at once, the sign is overloaded. I hope to fix this soon.
+* ~~If many messages are sent at once, the sign is overloaded. I hope to fix this soon.~~ Fixed July 13, 2013.

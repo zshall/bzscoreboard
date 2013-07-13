@@ -10,7 +10,7 @@ import sys
 
 # Uses bzadmin
 
-# pro-lite templates
+# Pro-Lite TruColorXP (rom 6) templates
 inactive = [
 	'<ID01><PI><FU><SD>BZFlag       <FZ>W',
 	'<ID01><PW><FU>NOT CONNECTED TO SERVER.             <FZ>X',
@@ -79,6 +79,13 @@ def Trace(proc):
 					killer = m.group(2).strip("'")
 					sendToSign(active['kill'] % (killer, killed))
 					runPage('Q')
+				except IndexError:
+					pass
+			elif "blew myself up" in line:
+				try:
+					user = re.search("'.*'", line).group(0).strip("'")
+					sendToSign(active['death'] % (user))
+					runPage('R')
 				except IndexError:
 					pass
 			# chat messages
